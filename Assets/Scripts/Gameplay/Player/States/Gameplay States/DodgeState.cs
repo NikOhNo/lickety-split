@@ -28,6 +28,8 @@ public class DodgeState : GameplayStateBase
     public override void ExitState()
     {
         // TODO: adjust animators and wrap up anything else associated with state
+        stateController.MoveInput = Vector2.zero;
+        stateController.SmoothedInputVector = Vector2.zero;
     }
 
     public override void PerformState()
